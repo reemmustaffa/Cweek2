@@ -1,0 +1,97 @@
+.one,
+.two,
+.three {
+    width: 300px;
+    height: 60px;
+    margin: 20px auto;
+    padding: 10px ;
+}
+.one,
+.three  {
+    background-color:#eee ;
+    text-align: center;
+    font-weight: 700;
+}
+.two {
+    background-color: red;
+}
+.elz {
+    background-color: #ccc;
+    width: fit-content;
+    text-align: center;
+    padding: 40px;
+    margin: 20px;
+    font-weight: 600;
+    font-size: 30px;
+}
+.elz::before {
+    content: "1";
+    background-color: red;
+    text-align: center;
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    left: -12px;
+    top: 350px;
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+.pp p::before{
+    content: attr(data-person);
+    background-color: #ccc;
+    position: absolute;
+    float: left;
+    left: 24px;
+    padding: 5px;
+    width: 60px;
+}
+.pp p {
+    background-color: #eee;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    width: fit-content;
+    margin-left: 100px;
+    border-left: 4px solid #ff0000de;
+}
+.pp p::after{
+    content: " ";
+    position: absolute;
+    left: 89px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #ff0000de transparent transparent ;
+}
+.last p {
+    background-color: #eee;
+    width: 700px;
+    padding: 20PX;
+    font-size: 30px;
+    margin: 10px auto;
+    font-weight: 400;
+    counter-increment: numbers;
+}
+.last p::before {
+    content: counter(numbers);
+    background-color: #ff0000ba;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    width: 80px;
+    height: 74.4px;
+    padding: 20px;
+    left: -19px;
+
+}
+.last p::after{
+    content: " ";
+    background-color: #ff0000ba;
+    height: 74.4px;
+    width: 5px;
+    position: relative;
+    float: right;
+    top: -21px;
+    left: 20px
+}
